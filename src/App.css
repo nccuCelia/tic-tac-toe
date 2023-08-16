@@ -1,0 +1,97 @@
+.board{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,130px);
+    grid-template-rows: repeat(3,130px);
+    gap: 2px;
+}
+
+.square{
+    display: flex;
+    border: 3px solid black;
+    width: 130px;
+    height: 130px;
+    justify-content: center; /*x軸*/
+    align-items: center; /*y軸*/
+    color: transparent; /*文字透明*/
+  }
+
+.square.cursor-pika {  /*自定義cursor*/
+  background-image: url('./assets/pikachu.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #FDFF0B;
+}
+
+.square.cursor-char {  /*自定義cursor*/
+  background-image: url('./assets/charmander.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #F5A809;
+}
+
+.game{
+    display: flex;
+    column-gap: 20px;
+}
+/*
+.info{
+  margin-left: 10px;
+}
+
+.margin{
+  margin-bottom: 10px;
+}*/
+/*
+.status{
+  display: flex;
+  border: 3px solid black;
+  width: 130*3 px;
+  height: 130*3 px;
+  align-items: center; 
+  font-size: 20px;
+  font-weight:bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+}*/
+
+.status-pika {  /*winner: pika*/
+  display: flex;
+  border: 3px solid black;
+  width: 130*3+9 px;
+  /*height: 130*3 px; 因為有文字所以沒用*/
+  line-height: 200px;
+  align-items: center; /*y軸*/
+  font-size: 20px;
+  font-weight:bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+  background-image: url('./assets/pikachu.svg');
+  background-position: 200px center; /*左 上*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #FDFF0B;
+}
+
+.status-char {  /*winner: char*/
+  display: flex;
+  border: 3px solid black;
+  width: 130*3 px;
+  line-height: 200px;
+  align-items: center;
+  font-size: 20px;
+  font-weight:bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+  background-image: url('./assets/charmander.svg');
+  background-position: 200px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #F5A809;
+}
